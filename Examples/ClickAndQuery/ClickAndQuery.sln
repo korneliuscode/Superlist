@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClickAndQuery", "ClickAndQuery.csproj", "{E1666C4F-356D-478E-A5C4-4AE4B987225A}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryComponents.SuperList", "..\..\BinaryComponents.SuperList\BinaryComponents.SuperList.csproj", "{3BBC852E-2033-4D67-93D9-EE3986304AAE}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ClickAndQuerySetup", "Setup\ClickAndQuerySetup\ClickAndQuerySetup.vdproj", "{6D431DB2-4312-4BA6-8138-57DBB5ABADEB}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E1666C4F-356D-478E-A5C4-4AE4B987225A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1666C4F-356D-478E-A5C4-4AE4B987225A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1666C4F-356D-478E-A5C4-4AE4B987225A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1666C4F-356D-478E-A5C4-4AE4B987225A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BBC852E-2033-4D67-93D9-EE3986304AAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BBC852E-2033-4D67-93D9-EE3986304AAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BBC852E-2033-4D67-93D9-EE3986304AAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BBC852E-2033-4D67-93D9-EE3986304AAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D431DB2-4312-4BA6-8138-57DBB5ABADEB}.Debug|Any CPU.ActiveCfg = Debug
+		{6D431DB2-4312-4BA6-8138-57DBB5ABADEB}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

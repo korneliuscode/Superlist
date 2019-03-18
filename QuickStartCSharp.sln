@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryComponents.SuperList", "BinaryComponents.SuperList\BinaryComponents.SuperList.csproj", "{3BBC852E-2033-4D67-93D9-EE3986304AAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickStart", "Examples\QuickStartCSharp\QuickStart.csproj", "{F0F39651-FE1C-480E-8E9C-FBEDE54A0AAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3BBC852E-2033-4D67-93D9-EE3986304AAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BBC852E-2033-4D67-93D9-EE3986304AAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BBC852E-2033-4D67-93D9-EE3986304AAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BBC852E-2033-4D67-93D9-EE3986304AAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0F39651-FE1C-480E-8E9C-FBEDE54A0AAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0F39651-FE1C-480E-8E9C-FBEDE54A0AAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0F39651-FE1C-480E-8E9C-FBEDE54A0AAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0F39651-FE1C-480E-8E9C-FBEDE54A0AAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

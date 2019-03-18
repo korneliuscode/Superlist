@@ -1,0 +1,43 @@
+ClickAndQuery
+~~~~~~~~~~~~~
+ClickAndQuery is a quick way to execute common queries for SQL Server, the queries 
+can have tags of the form ${Some Tag}, when executed ClickAndQuery will ask you to 
+enter tags values. I use it to execute queries against our FeedGhost application 
+database for common queries like finding user details and checking synchronization 
+statistics. If you install ClickAndQuery rather than building it then file associations 
+are created with .DBQuery extension files (of course you can do this manually if you want). 
+This way you can just double click on queries and they run with the option of bringing up a 
+tag value requester dialog if tags are within the query.
+
+Connection Details
+~~~~~~~~~~~~~~~~~~
+Before you can execute a query you’ll need to enter some connection details. The connection 
+details dialog can be found under the "Query->Connection Details" menu. Note that if you choose 
+the “SQL Server Authentication” option then your password will be stored in the .DBQuery file; 
+you can change this however by entering a tag like ${password} in the passwords place. 
+When the query is executed you will be prompted for the password together with any other tags 
+you’ve placed in the connection details dialog or query.
+
+The Query Pane
+~~~~~~~~~~~~~~
+You can enter any standard SQL in the query pane (with optional tags)that will execute 
+against a SqlDataReader.
+
+Examples
+~~~~~~~~
+SELECT * FROM [user] WHERE username = 'leea' 
+
+or with tags:
+
+SELECT * FROM [user] WHERE username = '${Username}' 
+
+In this example a tag value requester dialog will popup prior to the query executing. After
+you fill in the values the tags will be replaced verbatim with the value supplied and the
+query will would be executed.
+
+
+Notes
+~~~~~
+ClickAndQuery doesn't support multiple result sets, also there is no warning to save on closing 
+the application if you've made changes.
+

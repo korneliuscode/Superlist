@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragDrop", "DragDrop.csproj", "{61C3ADF7-586F-47E5-B849-C341BDA1BFF9}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{3BBC852E-2033-4D67-93D9-EE3986304AAE} = {3BBC852E-2033-4D67-93D9-EE3986304AAE}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryComponents.SuperList", "..\..\BinaryComponents.SuperList\BinaryComponents.SuperList.csproj", "{3BBC852E-2033-4D67-93D9-EE3986304AAE}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{61C3ADF7-586F-47E5-B849-C341BDA1BFF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61C3ADF7-586F-47E5-B849-C341BDA1BFF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61C3ADF7-586F-47E5-B849-C341BDA1BFF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61C3ADF7-586F-47E5-B849-C341BDA1BFF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BBC852E-2033-4D67-93D9-EE3986304AAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BBC852E-2033-4D67-93D9-EE3986304AAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BBC852E-2033-4D67-93D9-EE3986304AAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BBC852E-2033-4D67-93D9-EE3986304AAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
