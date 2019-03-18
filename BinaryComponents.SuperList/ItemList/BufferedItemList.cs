@@ -381,9 +381,10 @@ namespace BinaryComponents.SuperList.ItemLists
                 {
                     return 0;
                 }
-
+                SortOrder so = SortOrder.Ascending;
                 foreach (Column _column in _groupByColumns)
                 {
+                    so = _column.GroupSortOrder;
                     int result = _column.GroupedComparitor(x, y);
                     if (result != 0)
                     {
@@ -395,6 +396,7 @@ namespace BinaryComponents.SuperList.ItemLists
                 {
                     foreach (Column column in _groupByColumns)
                     {
+                        so = column.GroupSortOrder;
                         int result = column.Comparitor(x, y);
                         if (result != 0)
                         {
@@ -406,6 +408,7 @@ namespace BinaryComponents.SuperList.ItemLists
                 {
                     foreach (Column column in _sortByColumns)
                     {
+                        so = column.GroupSortOrder;
                         int result = column.Comparitor(x, y);
                         if (result != 0)
                         {
@@ -423,8 +426,15 @@ namespace BinaryComponents.SuperList.ItemLists
                 {
                     throw new InvalidOperationException("ItemList.ObjectComparer must be set. This is needed so that all rows have an order, otherwise rows can be prone to jumping around.");
                 }
-
-                return _list.ObjectComparer.Compare(x, y);
+                else
+                {
+                    int result = _list.ObjectComparer.Compare(x, y);
+                    if (result != 0)
+                    {
+                        return so == SortOrder.Descending ? -result : result;
+                    }
+                    return result;
+                }
             }
 
             private readonly BufferedList _list;

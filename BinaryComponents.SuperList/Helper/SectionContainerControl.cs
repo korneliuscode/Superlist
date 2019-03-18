@@ -40,6 +40,11 @@ namespace BinaryComponents.SuperList
 			}
 		}
 
+		void SectionContainerControl_Paint(object sender, PaintEventArgs e)
+		{
+			throw new NotImplementedException();
+		}
+
 		public SectionContainerControl()
 			: this( null )
 		{
