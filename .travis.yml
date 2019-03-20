@@ -1,2 +1,9 @@
 language: csharp
 solution: QuickStartCSharp.sln
+install:
+  - curl -L -o nuget.exe https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
+script:
+  - xbuild /p:Configuration=Release QuickStartCSharp.sln
+  - mono nuget.exe pack ./BinaryComponents.SuperList/BinaryComponents.SuperList.csproj.nuspec
+  - mono nuget.exe setApiKey $NUGET_API_KEY -Source $NUGET_SOURCE -Verbosity quiet
+  - mono nuget.exe push SuperList.*.nupkg -Source $NUGET_SOURCE
