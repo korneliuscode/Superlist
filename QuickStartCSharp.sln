@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 9.00
-# Visual Studio 2005
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28711.60
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryComponents.SuperList", "BinaryComponents.SuperList\BinaryComponents.SuperList.csproj", "{3BBC852E-2033-4D67-93D9-EE3986304AAE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickStart", "Examples\QuickStartCSharp\QuickStart.csproj", "{F0F39651-FE1C-480E-8E9C-FBEDE54A0AAC}"
@@ -22,5 +24,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {49101BDD-0DA5-40DB-8884-07DEA1690961}
 	EndGlobalSection
 EndGlobal
