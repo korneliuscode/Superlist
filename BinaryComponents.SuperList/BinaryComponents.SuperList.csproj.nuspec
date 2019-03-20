@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>SuperList</id>
+    <version>1.0.259</version>
+    <authors>Lee Paul Alexander, Kornelius</authors>
+    <owners>Lee Paul Alexander, Kornelius</owners>
+    <projectUrl>https://github.com/korneliuscode/Superlist</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>SuperList</description>
+    <releaseNotes>Initial release as nuget.</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+		<!--<tags>Tag1 Tag2</tags>
+    <dependencies>
+      <dependency id="SampleDependency" version="1.0" />
+    </dependencies>-->
+  </metadata>
+	<files>
+		<file src="bin\release\SuperList.dll" target="lib\net461" />
+	</files>
+</package>
