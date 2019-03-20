@@ -16,6 +16,6 @@
     </dependencies>-->
   </metadata>
 	<files>
-		<file src="bin\release\SuperList.dll" target="lib\net461" />
+		<file src="bin\Release\SuperList.dll" target="lib\net461" />
 	</files>
 </package>
