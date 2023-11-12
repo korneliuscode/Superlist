@@ -13,7 +13,6 @@ using BinaryComponents.Utility.Win32.Common;
 namespace BinaryComponents.Utility.Win32
 {
     [Flags]
-    [CLSCompliant(false)]
     public enum WindowStyles : uint
     {
         WS_OVERLAPPED = 0x00000000,
@@ -49,7 +48,6 @@ namespace BinaryComponents.Utility.Win32
     }
 
     [Flags]
-    [CLSCompliant(false)]
     public enum WindowStylesEx : uint
     {
         WS_EX_DLGMODALFRAME = 0x00000001,
@@ -248,7 +246,6 @@ namespace BinaryComponents.Utility.Win32
     }
 
     [StructLayout(LayoutKind.Sequential)]
-    [CLSCompliant(false)]
     public struct WINDOWPOS
     {
         public IntPtr hwnd;
@@ -261,7 +258,6 @@ namespace BinaryComponents.Utility.Win32
     }
 
     [StructLayout(LayoutKind.Sequential)]
-    [CLSCompliant(false)]
     public struct NCCALCSIZE_PARAMS
     {
         /// <summary>

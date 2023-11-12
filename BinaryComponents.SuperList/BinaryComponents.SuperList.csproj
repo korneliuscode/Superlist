@@ -1,14 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.50727</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{3BBC852E-2033-4D67-93D9-EE3986304AAE}</ProjectGuid>
+    <TargetFramework>net7.0-windows</TargetFramework>
+	<PlatformName>windows</PlatformName>
     <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BinaryComponents.SuperList</RootNamespace>
     <AssemblyName>SuperList</AssemblyName>
     <SccProjectName>
     </SccProjectName>
@@ -18,105 +12,29 @@
     </SccAuxPath>
     <SccProvider>
     </SccProvider>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <UpgradeBackupLocation>
-    </UpgradeBackupLocation>
-    <OldToolsVersion>2.0</OldToolsVersion>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <BaseAddress>8388608</BaseAddress>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <BaseAddress>8388608</BaseAddress>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Accessibility" />
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Column.cs" />
-    <Compile Include="ColumnList.cs" />
-    <Compile Include="Helper\AvailableSectionsControl.cs">
+    <Compile Update="Helper\AvailableSectionsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Helper\AvailableSectionsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Helper\AvailableSectionsForm.Designer.cs">
-      <DependentUpon>AvailableSectionsForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Helper\ImageWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Helper\ImageWindow.Designer.cs">
-      <DependentUpon>ImageWindow.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Helper\SectionContainerControl.cs">
+    <Compile Update="Helper\SectionContainerControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Helper\SerializationState.cs" />
-    <Compile Include="Helper\TextRendererEx.cs" />
-    <Compile Include="ItemList\ItemList.cs" />
-    <Compile Include="ItemList\BufferedItemList.cs" />
-    <Compile Include="RowIdentifier.cs" />
-    <Compile Include="Sections\AvailableColumnsSection.cs">
-    </Compile>
-    <Compile Include="Sections\CellSection.cs" />
-    <Compile Include="Sections\CellSectionImage.cs" />
-    <Compile Include="Sections\CustomiseGroupingSection.cs" />
-    <Compile Include="Sections\CustomiseListSection.cs" />
-    <Compile Include="Sections\GroupSection.cs" />
-    <Compile Include="Sections\HeaderColumnSection.cs" />
-    <Compile Include="Sections\HeaderSectionColumnContainer.cs" />
-    <Compile Include="Sections\ISectionHost.cs" />
-    <Compile Include="ListControl.cs">
+    <Compile Update="ListControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sections\HeaderSection.cs" />
-    <Compile Include="Sections\ListSection.cs" />
-    <Compile Include="Sections\OptionsToolbarSection.cs" />
-    <Compile Include="Sections\RowSection.cs" />
-    <Compile Include="Sections\ScrollableSection.cs" />
-    <Compile Include="Sections\Section.cs" />
-    <Compile Include="Sections\SectionContainer.cs" />
-    <Compile Include="Sections\SectionFactory.cs" />
-    <Compile Include="SelectedItemsCollection.cs" />
-    <Compile Include="Utility\Common.cs" />
-    <Compile Include="Utility\ControlUtils.cs" />
-    <Compile Include="Utility\EventingList.cs" />
-    <Compile Include="Utility\Gdi.cs" />
-    <Compile Include="Utility\GdiPlusEx.cs" />
-    <Compile Include="Utility\ManifestResources.cs" />
-    <Compile Include="Utility\Messages.cs" />
-    <Compile Include="Utility\Set.cs" />
-    <Compile Include="Utility\User.cs" />
-    <Compile Include="Utility\Windows.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\CollapseAllGroupsButton.ico" />
@@ -127,33 +45,4 @@
     <EmbeddedResource Include="Resources\DownArrow.ico" />
     <EmbeddedResource Include="Resources\UpArrow.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Helper\AvailableSectionsForm.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>AvailableSectionsForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Helper\ImageWindow.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>ImageWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Helper\SectionContainerControl.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>SectionContainerControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ListControl.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>ListControl.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="SectionsDiagram.cd" />
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>

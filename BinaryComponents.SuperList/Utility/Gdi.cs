@@ -57,7 +57,6 @@ namespace BinaryComponents.Utility.Win32
         public byte AlphaFormat;
     }
 
-    [CLSCompliant(false)]
     [StructLayout(LayoutKind.Sequential)]
     public struct DRAWTEXTPARAMS
     {
@@ -68,7 +67,6 @@ namespace BinaryComponents.Utility.Win32
         public uint uiLengthDrawn;
     }
 
-    [CLSCompliant(false)]
     public sealed class Gdi
     {
         [DllImport("gdi32.dll")]

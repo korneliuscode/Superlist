@@ -6,7 +6,6 @@ using BinaryComponents.Utility.Win32.Common;
 
 namespace BinaryComponents.Utility.Win32
 {
-    [CLSCompliant(false)]
     public static class User
     {
         [Flags]
