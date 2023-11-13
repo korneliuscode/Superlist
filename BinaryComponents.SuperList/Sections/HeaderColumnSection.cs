@@ -162,7 +162,7 @@ namespace BinaryComponents.SuperList.Sections
 				{
 					if( _column.ShowHeaderSortArrow )
 					{
-						rc.Width -= _arrowWidth + _arrowSpaceXMargin * 2;
+						rc.Width -= _scaledArrowWidth + _scaledArrowSpaceXMargin * 2;
 					}
 				}
 
@@ -201,6 +201,7 @@ namespace BinaryComponents.SuperList.Sections
 				return;
 			}
 
+
 			int offset = 0;
 
 			if( Parent.LayoutController != null )
@@ -209,12 +210,12 @@ namespace BinaryComponents.SuperList.Sections
 			}
 			//
 			// Draw sort arrows
-			const int halfArrowWidth = _arrowWidth / 2;
+			int halfArrowWidth = _scaledArrowWidth / 2;
 			int right = Rectangle.Right - offset;
-			Rectangle rcArrow = new Rectangle( right - _arrowWidth - _arrowSpaceXMargin * 2,
-																				Rectangle.Y + (Rectangle.Height - _arrowWidth) / 2,
-																				_arrowWidth,
-																				_arrowWidth
+			Rectangle rcArrow = new Rectangle( right - _scaledArrowWidth - _scaledArrowSpaceXMargin * 2,
+																				Rectangle.Y + (Rectangle.Height - _scaledArrowWidth) / 2,
+																				_scaledArrowWidth,
+																				_scaledArrowWidth
 					);
 
 			SortOrder sortOrder = Parent.GetColumnSortOrder( Column );
@@ -288,7 +289,11 @@ namespace BinaryComponents.SuperList.Sections
 			int headerWidth;
 			int height;
 
-			if( VisualStyleRenderer.IsSupported )
+			float dpiScaleFactor = gs.Graphics.DpiX / 96.0f; // Assuming 96 DPI as the standard scaling factor.
+			_scaledArrowWidth = (int)(_arrowWidth * dpiScaleFactor); // Dynamically scale the arrow width based on DPI.
+			_scaledArrowSpaceXMargin = (int)(_arrowSpaceXMargin * dpiScaleFactor);
+
+			if ( VisualStyleRenderer.IsSupported )
 			{
 				VisualStyleRenderer renderer = GetRenderer();
 
@@ -309,7 +314,7 @@ namespace BinaryComponents.SuperList.Sections
 					headerWidth = _column.Width;
 					break;
 				case DisplayMode.Customise:
-					headerWidth = TextRenderer.MeasureText( _column.Caption, SystemFonts.MenuFont ).Width + widthPadding + _arrowWidth + _arrowSpaceXMargin * 2;
+					headerWidth = TextRenderer.MeasureText( _column.Caption, SystemFonts.MenuFont ).Width + widthPadding + _scaledArrowWidth + _scaledArrowSpaceXMargin * 2;
 					break;
 				default:
 					throw new NotSupportedException();
@@ -539,6 +544,8 @@ namespace BinaryComponents.SuperList.Sections
 		private int _oldWidth;
 		private const int _arrowSpaceXMargin = 2;
 		private const int _arrowWidth = 10;
+		private int _scaledArrowWidth;
+		private int _scaledArrowSpaceXMargin;
 		private DisplayMode _displayMode;
 		private Column _column;
 		private const int _hotSpotWidth = 20;
