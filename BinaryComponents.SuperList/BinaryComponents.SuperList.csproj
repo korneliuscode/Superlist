@@ -16,7 +16,10 @@
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>$(VersionPrefix)1.2.000</Version>
+    <Version>$(VersionPrefix)1.2.2</Version>
+    <Title>SuperList</Title>
+    <PackageProjectUrl>https://github.com/korneliuscode/Superlist/</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
@@ -46,5 +49,12 @@
     <EmbeddedResource Include="Resources\ExpandGroup.ico" />
     <EmbeddedResource Include="Resources\DownArrow.ico" />
     <EmbeddedResource Include="Resources\UpArrow.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md" />
+    <None Include="C:\Users\korne\Documents\GitHub\Superlist\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 </Project>
