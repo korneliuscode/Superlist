@@ -16,7 +16,7 @@
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>$(VersionPrefix)1.2.2</Version>
+    <Version>$(VersionPrefix)1.3.0</Version>
     <Title>SuperList</Title>
     <PackageProjectUrl>https://github.com/korneliuscode/Superlist/</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
