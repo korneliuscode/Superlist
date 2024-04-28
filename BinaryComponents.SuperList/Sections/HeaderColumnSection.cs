@@ -360,6 +360,12 @@ namespace BinaryComponents.SuperList.Sections
 			return rc.Contains( pt );
 		}
 
+		private bool PointInSection(Point pt)
+		{
+			Rectangle rc = HostBasedRectangle;
+			return rc.Contains(pt);
+		}
+
 		public override void KeyDown( KeyEventArgs e )
 		{
 			base.KeyDown( e );
@@ -402,7 +408,7 @@ namespace BinaryComponents.SuperList.Sections
 				#endregion
 
 				Host.Cursor = Cursors.VSplit;
-				if( Host.SectionWithMouseCapture == this )
+				if( Host.SectionWithMouseCapture == this)
 				{
 					int newWidth = pt.X - HostBasedRectangle.Left - _reservedColumnSpace;
 
@@ -466,7 +472,8 @@ namespace BinaryComponents.SuperList.Sections
 			}
 
 			Point pt = new Point( e.X, e.Y );
-			if( !PointInChangeWidthHotSpot( pt ) )
+			//Only Sort if not Reszing and if point is within the current section (in case button is released outside of the section when resizing)
+			if( !PointInChangeWidthHotSpot( pt ) && PointInSection(pt))
 			{
 				switch( Parent.GetColumnSortOrder( Column ) )
 				{
