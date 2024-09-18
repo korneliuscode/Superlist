@@ -144,7 +144,7 @@ namespace BinaryComponents.SuperList.Sections
 
 		public void PaintSelection( GraphicsSettings gs )
 		{
-			System.Diagnostics.Debug.WriteLine( this.Host.CurrentSectionDraggedOver );
+			//System.Diagnostics.Debug.WriteLine( this.Host.CurrentSectionDraggedOver );
 			if( IsSelected )
 			{
 				gs.Graphics.FillRectangle( Host.FocusedSection == ListSection ? SystemBrushes.Highlight : SystemBrushes.ButtonFace, Rectangle );

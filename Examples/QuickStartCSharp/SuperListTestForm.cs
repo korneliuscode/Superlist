@@ -145,7 +145,7 @@ namespace SuperListTest
 
 		private void SelectedItems_DataChanged( object sender, SelectedItemsChangedEventArgs e )
 		{
-			Debug.WriteLine( string.Format( "Selection event {0}", e.ChangeType ) );
+			//Debug.WriteLine( string.Format( "Selection event {0}", e.ChangeType ) );
 			foreach( RowIdentifier ri in e.Items )
 			{
 				string s;
@@ -167,7 +167,7 @@ namespace SuperListTest
 						s += _superList.Columns.GroupedItems[i].GroupItemAccessor( ri.Items[0] );
 					}
 				}
-				Trace.WriteLine( s );
+				//Trace.WriteLine( s );
 			}
 		}
 
@@ -270,7 +270,7 @@ namespace SuperListTest
 		{
 			foreach( Person p in _superList.Items.ToArray() )
 			{
-				Debug.WriteLine( p );
+				//Debug.WriteLine( p );
 			}
 		}
 
